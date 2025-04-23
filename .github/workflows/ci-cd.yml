@@ -39,3 +39,5 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           port: ${{ secrets.FTP_PORT }}
+          local-dir: dist/
+          server-dir: /home/u329442692/domains/darshilmukeshdesai.com/public_html
