@@ -62,7 +62,7 @@ export const myProjects = [
         desc: 'Built as a modern personal portfolio website with React.js, HTML, CSS, and JavaScript—featuring a fixed navigation bar with smooth anchor links, viewport-spanning sections (About, Work, Work Experience, Contact Me), immersive 3D visuals powered by Three.js, and EmailJS-driven contact form functionality—the site is designed to showcase projects and professional experience with responsive, interactive performance.',
         subdesc:
             '',
-        href: 'https://darshilmukeshdesai.com/',
+        href: 'https://github.com/darshil040804/Personal-Portfolio-Website',
         texture: '/textures/project/project1.mp4',
         logo: '/assets/logo_circle.png',
         logoStyle: {
