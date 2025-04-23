@@ -30,9 +30,6 @@ jobs:
       - name: Build for production
         run: npm run build
 
-      - name: Remove FTP sync state
-        run: rm -f public_html/.ftp-deploy-sync-state.json
-
       - name: Deploy to Hostinger via FTP
         uses: SamKirkland/FTP-Deploy-Action@4.1.0
         with:
