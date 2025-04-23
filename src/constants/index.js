@@ -102,7 +102,7 @@ export const myProjects = [
         ],
     },
     {
-            title: 'SpartanMind - Game App',
+            title: 'Spartanmind - Game App',
         desc: 'Spartanmind is a C++-powered variant of the classic Mastermind game—challenge yourself to guess a hidden word in as few attempts as possible—featuring a polished GUI built with WxWidgets and rapid UI prototyping via wxBuilder, UML design and workflow management in Visual Paradigm, documentation via DoxyWizard, and full GitLab version control to ensure maintainability and seamless collaboration.',
         subdesc:
             '',
