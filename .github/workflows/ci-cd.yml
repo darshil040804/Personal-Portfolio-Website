@@ -21,4 +21,4 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           port: ${{ secrets.FTP_PORT }}
           local-dir: ./dist/           # path in the repo to upload
-          server-dir: /public_html
+          server-dir: /public_html/
