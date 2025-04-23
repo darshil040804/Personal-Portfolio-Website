@@ -40,4 +40,4 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           port: ${{ secrets.FTP_PORT }}
           local-dir: dist/
-          server-dir: /home/u329442692/domains/darshilmukeshdesai.com/public_html
+          server-dir: /home/u329442692/domains/darshilmukeshdesai.com/public_html/
