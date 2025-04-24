@@ -108,7 +108,7 @@ export const myProjects = [
             '',
         href: '',
         texture: '/textures/project/project2.mp4',
-        logo: '/assets/project-logo1.png',
+        logo: '/assets/project-logo2.png',
         logoStyle: {
         },
         spotlight: '/assets/spotlight2.png',
