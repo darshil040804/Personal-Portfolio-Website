@@ -9,10 +9,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # 1. Check out your code
       - uses: actions/checkout@v4
 
-      # 2. Install Node and deps
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
@@ -21,11 +19,9 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      # 3. Build your Vite project
       - name: Build for production
-        run: npm run build   # → creates the dist/ folder
+        run: npm run build
 
-      # 4. Deploy dist/ via FTP
       - name: Upload via FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
@@ -35,4 +31,3 @@ jobs:
           port: ${{ secrets.FTP_PORT }}
           local-dir: ./dist/
           server-dir: ./
-          ## git-ftp-args: --insecure
