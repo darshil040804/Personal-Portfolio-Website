@@ -1,17 +1,18 @@
-name: CI & Deploy to Hostinger
+name: Build & Deploy to Hostinger
 
 on:
   push:
-    branches: [ main ]   # or your default branch
+    branches: [ main ]
 
 jobs:
-  build-and-deploy:
+  ftp-deploy:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
+      # 1. Check out your code
+      - uses: actions/checkout@v4
 
+      # 2. Install Node and deps
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
@@ -20,22 +21,18 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Run linter
-        run: npm run lint
-
-      # if/when you add tests, un-comment:
-      # - name: Run tests
-      #   run: npm run test
-
+      # 3. Build your Vite project
       - name: Build for production
-        run: npm run build
+        run: npm run build   # → creates the dist/ folder
 
-      - name: Deploy to Hostinger via FTP
-        uses: SamKirkland/FTP-Deploy-Action@4.1.0
+      # 4. Deploy dist/ via FTP
+      - name: Upload via FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
-          server: ${{ secrets.FTP_SERVER }}
+          server: ${{ secrets.FTP_HOST }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: dist/
-          server-dir: public_html/
-          dangerous-clean-slate: true
+          port: ${{ secrets.FTP_PORT }}
+          local-dir: ./dist/            # ← your built output
+          server-dir: ./
+          git-ftp-args: --insecure      # remove if using FTPS/SFTP
