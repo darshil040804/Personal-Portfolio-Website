@@ -100,6 +100,50 @@ export const myProjects = [
             },
         ],
     },
+    {
+        title: 'Movie Hub',
+        desc: 'Movie Hub is a movie search app powered by the TMDB API and Appwrite backend. Users can search movies and view posters, ratings, release year, etc. The app logs search activity in a database and displays the top 5 most-searched movies in a dynamic "Trending" section. Features include API request debouncing, responsive UI with TailwindCSS, and full-stack integration using JavaScript, HTML, and Appwrite for real-time data handling.',
+        subdesc:
+            '',
+        href: 'https://movie-hub-guc4.vercel.app/',
+        texture: '/textures/project/project3.mp4',
+        logo: '/assets/movie-hub-rounded.png',
+        logoStyle: {
+        },
+        spotlight: '/assets/spotlight5.png',
+        tags: [
+            {
+                id: 6,
+                name: 'AppWrite',
+                path: '/assets/appwrite-logo.png',
+            },
+            {
+                id: 1,
+                name: 'React.js',
+                path: '/assets/react.svg',
+            },
+            {
+                id: 2,
+                name: 'TailwindCSS',
+                path: 'assets/tailwindcss.png',
+            },
+            {
+                id: 3,
+                name: 'Html5',
+                path: '/assets/html.png',
+            },
+            {
+                id: 4,
+                name: 'css',
+                path: '/assets/css.png',
+            },
+            {
+                id: 5,
+                name: 'JavaScript',
+                path: '/assets/javascript.png',
+            },
+        ],
+    },
 ];
 
 export const calculateSizes = (isSmall, isMobile, isTablet) => {
