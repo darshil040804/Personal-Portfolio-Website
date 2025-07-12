@@ -29,7 +29,7 @@ export const myProjects = [
             '',
         href: 'https://github.com/darshil040804/Personal-Portfolio-Website',
         texture: '/textures/project/project1.mp4',
-        logo: '/assets/logo_circle.png',
+        logo: '/assets/portfolio-logo.png',
         logoStyle: {
         },
         spotlight: '/assets/spotlight1.png',
