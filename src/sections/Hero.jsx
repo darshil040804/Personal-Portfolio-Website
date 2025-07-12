@@ -27,7 +27,7 @@ const Hero = () => {
                     Hi, I am Darshil <span className="waving-hand">👋</span>
                 </p>
                 <p className="hero_tag text-gray_gradient">
-                    Building Softwares
+                    Building Software
                 </p>
             </div>
 
@@ -42,17 +42,15 @@ const Hero = () => {
                                 position={sizes.deskPosition}
                                 scale ={sizes.deskScale} />
                         </HeroCamera>
-
-
-                        <group>
-                            <Target position = {sizes.targetPosition}/>
-                            <ReactLogo position = {sizes.reactLogoPosition}/>
-                            <Cube position = {sizes.cubePosition}/>
-                            <Rings position = {sizes.ringPosition}/>
-                        </group>
                         <ambientLight intensity={1.5}/>
                         <directionalLight position={[10,10,10]} intensity ={0.5}/>
                     </Suspense>
+                    <group>
+                        <Target position = {sizes.targetPosition}/>
+                        <ReactLogo position = {sizes.reactLogoPosition}/>
+                        <Cube position = {sizes.cubePosition}/>
+                        <Rings position = {sizes.ringPosition}/>
+                    </group>
                 </Canvas>
             </div>
             <div className="absolute bottom-7 left-0 right-0 z-10 c-space">

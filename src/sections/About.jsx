@@ -20,7 +20,7 @@ const About = () => {
                         <img src="/assets/grid1.png" alt="grid-1" className="w-full sm:h-[276px] h-fit object-contain"/>
                         <div>
                             <p className="grid-headtext"> Hi, I am Darshil </p>
-                            <p className="grid-subtext"> Being a Junior in college, I have honed my skills in software development</p>
+                            <p className="grid-subtext"> I'm a junior in college passionate about software development. I have hands-on experience building full-stack applications that solve real-world problems.</p>
                         </div>
                     </div>
                 </div>
@@ -46,7 +46,7 @@ const About = () => {
                                 Location
                             </p>
                             <p className="grid-subtext">
-                                I'm Based in East Lansing, MI, with remote work available
+                                I'm based in East Lansing, MI, with remote work available
                             </p>
                             <a href={ navLinks[3].href } className={"w-fit"}>
                                 <Button name="Contact Me" isBeam containerClass="w-full mt-10"/>
