@@ -147,7 +147,7 @@ const Projects = () => {
                 </div>
 
                 {/* RIGHT: persistent 3D canvas */}
-                <div className="border border-black-300 bg-black-200 rounded-lg h-96 md:h-full">
+                <div className="hidden lg:block border border-black-300 bg-black-200 rounded-lg h-96 md:h-full">
                     <Canvas>
                         <ambientLight intensity={3} />
                         <directionalLight position={[10, 10, 5]} />

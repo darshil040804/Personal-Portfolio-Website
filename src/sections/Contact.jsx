@@ -53,9 +53,31 @@ const Contact = () => {
 
     return (
         <section className="c-space my-20" id="contact">
-            <div className="relative min-h-screen flex items-center justify-center flex-col">
-                <img src="/assets/terminal.png" alt="Terminal-Background" className="absolute inset-0 min-h-screen"/>
-                <div className="contact-container">
+                  <div className="relative min-h-screen flex items-center justify-center flex-col">
+                    {/* ─── WINDOWS‑STYLE TERMINAL FRAME ─── */}
+                    <div className="flex absolute inset-0 items-center justify-center p-4 sm:p-2 lg:p-10">
+                      <div className="w-full sm:max-w-4xl rounded-lg shadow-lg overflow-hidden">
+
+                        {/* ─── Title Bar ─── */}
+                        <div className="flex justify-end items-center bg-gray-600">
+                          <img
+                            src="/assets/windows-buttons.png"
+                            alt="Window Controls"
+                            className="h-10"
+                          />
+                        </div>
+
+                        {/* ─── Terminal Body ─── */}
+                        <div
+                          className="p-6"
+                          style={{
+                            backgroundColor: '#111',              // fallback
+                            backgroundImage: 'url(/assets/terminal-texture.png)',
+                            backgroundSize:    'cover',
+                            backgroundRepeat:  'no-repeat',
+                          }}
+                        >
+                          <div className="contact-container w-full max-w-2xl mx-auto px-4">
                     <h3 className="head-text">Let's Talk</h3>
                     <p className="text-lg text-white-600 mt-3">
                         Let's talk
@@ -108,7 +130,10 @@ const Contact = () => {
                     </form>
                 </div>
             </div>
-        </section>
+          </div>
+        </div>
+      </div>
+</section>
     )
 }
 export default Contact
