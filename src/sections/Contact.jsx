@@ -55,8 +55,8 @@ const Contact = () => {
         <section className="c-space my-20" id="contact">
                   <div className="relative min-h-screen flex items-center justify-center flex-col">
                     {/* ─── WINDOWS‑STYLE TERMINAL FRAME ─── */}
-                    <div className="flex absolute inset-0 items-center justify-center p-4 sm:p-2 lg:p-10">
-                      <div className="w-full sm:max-w-4xl rounded-lg shadow-lg overflow-hidden">
+                    <div className="flex absolute inset-0 items-center justify-center">
+                      <div className="w-full sm:max-w-5xl rounded-lg shadow-lg overflow-hidden">
 
                         {/* ─── Title Bar ─── */}
                         <div className="flex justify-end items-center bg-gray-600">
