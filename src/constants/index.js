@@ -23,6 +23,74 @@ export const navLinks = [
 
 export const myProjects = [
     {
+        title: 'JobLens AI',
+        desc: 'JobLens AI is an AI-powered resume analysis tool that scores resumes based on job descriptions, providing both a resume score and ATS score. It offers detailed feedback on what to add, remove, or replace for better optimization. Built with React JS, React Router v7, and TailwindCSS, it uses Puterjs for cloud storage and AI features, allowing users to sign in with their Puter account and access all previous analyses in one place.',
+        subdesc:
+            '',
+        href: 'https://job-lens-ai.vercel.app/',
+        texture: '/textures/project/project4.mp4',
+        logo: '/assets/project-logo4.png',
+        logoStyle: {
+        },
+        spotlight: '/assets/spotlight4.png',
+        tags: [
+            {
+                id: 6,
+                name: 'Puter.js',
+                path: '/assets/puter-logo.png',
+            },
+            {
+                id: 1,
+                name: 'React.js',
+                path: '/assets/react.svg',
+            },
+            {
+                id: 2,
+                name: 'TailwindCSS',
+                path: 'assets/tailwindcss.png',
+            },
+            {
+                id: 5,
+                name: 'JavaScript',
+                path: '/assets/javascript.png',
+            },
+        ],
+    },
+    {
+        title: 'Movie Hub',
+        desc: 'Movie Hub is a movie search app powered by the TMDB API and Appwrite backend. Users can search movies and view posters, ratings, release year, etc. The app logs search activity in a database and displays the top 5 most-searched movies in a dynamic "Trending" section. Features include API request debouncing, responsive UI with TailwindCSS, and full-stack integration using JavaScript, HTML, and Appwrite for real-time data handling.',
+        subdesc:
+            '',
+        href: 'https://movie-hub-guc4.vercel.app/',
+        texture: '/textures/project/project3.mp4',
+        logo: '/assets/project-logo3.png',
+        logoStyle: {
+        },
+        spotlight: '/assets/spotlight5.png',
+        tags: [
+            {
+                id: 6,
+                name: 'AppWrite',
+                path: '/assets/appwrite-logo.png',
+            },
+            {
+                id: 1,
+                name: 'React.js',
+                path: '/assets/react.svg',
+            },
+            {
+                id: 2,
+                name: 'TailwindCSS',
+                path: 'assets/tailwindcss.png',
+            },
+            {
+                id: 5,
+                name: 'JavaScript',
+                path: '/assets/javascript.png',
+            },
+        ],
+    },
+    {
         title: 'Personal Portfolio Website',
         desc: 'Built as a modern personal portfolio website with React.js, HTML, CSS, and JavaScript—featuring a fixed navigation bar with smooth anchor links, viewport-spanning sections (About, Work, Work Experience, Contact Me), immersive 3D visuals powered by Three.js, and EmailJS-driven contact form functionality—the site is designed to showcase projects and professional experience with responsive, interactive performance.',
         subdesc:
@@ -46,21 +114,11 @@ export const myProjects = [
             },
             {
                 id: 3,
-                name: 'Html5',
-                path: '/assets/html.png',
-            },
-            {
-                id: 4,
-                name: 'css',
-                path: '/assets/css.png',
-            },
-            {
-                id: 5,
                 name: 'JavaScript',
                 path: '/assets/javascript.png',
             },
             {
-                id: 6,
+                id: 4,
                 name: 'ThreeJs',
                 path: '/assets/threejs.png',
             }
@@ -100,50 +158,7 @@ export const myProjects = [
             },
         ],
     },
-    {
-        title: 'Movie Hub',
-        desc: 'Movie Hub is a movie search app powered by the TMDB API and Appwrite backend. Users can search movies and view posters, ratings, release year, etc. The app logs search activity in a database and displays the top 5 most-searched movies in a dynamic "Trending" section. Features include API request debouncing, responsive UI with TailwindCSS, and full-stack integration using JavaScript, HTML, and Appwrite for real-time data handling.',
-        subdesc:
-            '',
-        href: 'https://movie-hub-guc4.vercel.app/',
-        texture: '/textures/project/project3.mp4',
-        logo: '/assets/movie-hub-rounded.png',
-        logoStyle: {
-        },
-        spotlight: '/assets/spotlight5.png',
-        tags: [
-            {
-                id: 6,
-                name: 'AppWrite',
-                path: '/assets/appwrite-logo.png',
-            },
-            {
-                id: 1,
-                name: 'React.js',
-                path: '/assets/react.svg',
-            },
-            {
-                id: 2,
-                name: 'TailwindCSS',
-                path: 'assets/tailwindcss.png',
-            },
-            {
-                id: 3,
-                name: 'Html5',
-                path: '/assets/html.png',
-            },
-            {
-                id: 4,
-                name: 'css',
-                path: '/assets/css.png',
-            },
-            {
-                id: 5,
-                name: 'JavaScript',
-                path: '/assets/javascript.png',
-            },
-        ],
-    },
+
 ];
 
 export const calculateSizes = (isSmall, isMobile, isTablet) => {
