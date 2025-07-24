@@ -45,12 +45,14 @@ const Hero = () => {
                         <ambientLight intensity={1.5}/>
                         <directionalLight position={[10,10,10]} intensity ={0.5}/>
                     </Suspense>
-                    <group>
-                        <Target position = {sizes.targetPosition}/>
-                        <ReactLogo position = {sizes.reactLogoPosition}/>
-                        <Cube position = {sizes.cubePosition}/>
-                        <Rings position = {sizes.ringPosition}/>
-                    </group>
+                    {!isMobile && !isSmall && (
+                        <group>
+                            <Target position = {sizes.targetPosition}/>
+                            <ReactLogo position = {sizes.reactLogoPosition}/>
+                            <Cube position = {sizes.cubePosition}/>
+                            <Rings position = {sizes.ringPosition}/>
+                        </group>
+                    )}
                 </Canvas>
             </div>
             <div className="absolute bottom-7 left-0 right-0 z-10 c-space">
