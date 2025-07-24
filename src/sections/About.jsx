@@ -26,10 +26,10 @@ const About = () => {
         { name: 'ThreeJS', src: '/assets/threejs.png' },
         { name: 'Appwrite', src: '/assets/appwrite-logo.png' },
         { name: 'PuterJS', src: '/assets/puter-logo.png' },
-        { name: 'Figma', src: '/assets/figma.svg' },
-        { name: 'ThreeJS', src: '/assets/threejs.png' },
-        { name: 'Appwrite', src: '/assets/appwrite-logo.png' },
-        { name: 'PuterJS', src: '/assets/puter-logo.png' },
+        { name: 'NextJS', src: '/assets/nextjs.png' },
+        { name: 'NodeJS', src: '/assets/node-js.png' },
+        { name: 'Python', src: '/assets/python.png' },
+        { name: 'Java', src: '/assets/java.png' },
         // You can easily add more technologies here in the future!
     ];
 
