@@ -66,15 +66,15 @@ const About = () => {
                                     }}
                                 >
                                     <div className="tech-logo group-hover:bg-neutral-100 group-hover:bg-opacity-20 transition-all duration-300">
-                                        <img src={tech.src} alt={tech.name} className="w-20 h-20 object-contain" />
+                                        <img src={tech.src} alt={tech.name} className="w-12 h-12 object-contain" />
                                     </div>
-                                    <div className="tooltip fixed opacity-0 group-hover:opacity-100 bg-black-300 rounded-md text-white text-xs whitespace-nowrap transition-opacity duration-300 pointer-events-none z-50">
+                                    <div className="tooltip fixed opacity-0 group-hover:opacity-100 px-2 py-1 bg-gray-800 rounded-md text-white text-xs whitespace-nowrap transition-opacity duration-300 pointer-events-none z-50">
                                         {tech.name}
                                     </div>
                                 </div>
                             ))}
                         </div>
-                        <div className="mt-6">
+                        <div className="mt-2">
                             <p className="grid-headtext"> Tech Stack</p>
                             <p className="grid-subtext mt-2"> I am proficient in Python, C++, Java, Html, CSS, JavaScript & SQL </p>
                         </div>

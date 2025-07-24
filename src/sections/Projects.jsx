@@ -88,8 +88,23 @@ const Projects = () => {
                     {/* Tech tags */}
                     <div className="flex flex-wrap gap-3 px-2">
                         {myProjects[current].tags.map(tag => (
-                            <div key={tag.id} className="tech-logo">
-                                <img src={tag.path} alt={tag.name} className="w-6 h-6" />
+                            <div
+                                key={tag.id}
+                                className="relative group"
+                                onMouseMove={(e) => {
+                                    const tooltip = e.currentTarget.querySelector('.tooltip');
+                                    if (tooltip) {
+                                        tooltip.style.left = `${e.clientX + 10}px`;
+                                        tooltip.style.top = `${e.clientY + 10}px`;
+                                    }
+                                }}
+                            >
+                                <div className="tech-logo group-hover:bg-neutral-100 group-hover:bg-opacity-20 transition-all duration-300">
+                                    <img src={tag.path} alt={tag.name} className="w-6 h-6" />
+                                </div>
+                                <div className="tooltip fixed opacity-0 group-hover:opacity-100 px-2 py-1 bg-gray-800 rounded-md text-white text-xs whitespace-nowrap transition-opacity duration-300 pointer-events-none z-50">
+                                    {tag.name}
+                                </div>
                             </div>
                         ))}
                     </div>
@@ -159,8 +174,8 @@ const Projects = () => {
 
                 {/* RIGHT: persistent 3D canvas */}
                 <div className="hidden lg:block border border-black-300 bg-black-200 rounded-lg h-96 md:h-full">
-                    <Canvas 
-                        gl={{ 
+                    <Canvas
+                        gl={{
                             antialias: true,
                             alpha: true,
                             preserveDrawingBuffer: true,
