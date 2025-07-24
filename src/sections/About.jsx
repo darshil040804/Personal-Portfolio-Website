@@ -48,7 +48,7 @@ const About = () => {
                 <div className="col-span-1 xl:row-span-3">
                     <div className="grid-container">
                         {/* Tech Stack section moved to the bottom with appropriate padding */}
-                        <div className="grid grid-cols-4 gap-3 mb-4 px-4 mt-4">
+                        <div className="grid grid-cols-4 gap-3.5 mb-4 px-4 mt-4">
                             {technologies.map((tech, index) => (
                                 <div
                                     key={index}
