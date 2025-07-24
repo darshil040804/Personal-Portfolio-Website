@@ -25,7 +25,7 @@ const About = () => {
                     </div>
                 </div>
                 <div className="col-span-1 xl:row-span-3">
-                    <div className="grid-container">
+                    <div className="grid-container justify-center items-center">
                         <img src="/assets/grid2.png" alt="grid-2" className="w-full sm:w-[276px] h-fit object-contain justify-center items-center"/>
                         <div>
                             <p className="grid-headtext"> Tech Stack</p>
