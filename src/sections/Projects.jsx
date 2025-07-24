@@ -102,7 +102,7 @@ const Projects = () => {
                             rel="noreferrer"
                             className="px-4 py-2 rounded-lg bg-gradient-to-r from-purple-500/70 to-blue-500/70 text-white hover:from-purple-600/70 hover:to-blue-600/70 transition-all flex items-center"
                         >
-                            Check GitHub Repo
+                            GitHub Repo
                             <img src="/assets/arrow-up.png" alt="arrow" className="w-3 h-3 inline-block ml-1" />
                         </a>
                         {myProjects[current].liveLink && (
@@ -112,7 +112,7 @@ const Projects = () => {
                                 rel="noreferrer"
                                 className="px-4 py-2 rounded-lg bg-gradient-to-r from-green-500/70 to-teal-500/70 text-white hover:from-green-600/70 hover:to-teal-600/70 transition-all flex items-center"
                             >
-                                Check Live Link
+                                Live Link
                                 <img src="/assets/arrow-up.png" alt="arrow" className="w-3 h-3 inline-block ml-1" />
                             </a>
                         )}
@@ -177,7 +177,7 @@ const Projects = () => {
                                 </group>
                             </Center>
                         </Suspense>
-                        <OrbitControls maxPolarAngle={Math.PI / 2} enableZoom={false} />
+                        <OrbitControls minPolarAngle={Math.PI / 2} maxPolarAngle={Math.PI / 2} enableZoom={false} />
                     </Canvas>
                 </div>
             </div>
