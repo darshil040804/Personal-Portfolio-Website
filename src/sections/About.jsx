@@ -38,7 +38,9 @@ const About = () => {
             <div className="grid xl:grid-cols-3 xl:grid-rows-6 md:grid-cols-2 grid-cols-1 gap-5 h-full">
                 <div className="col-span-1 xl:row-span-3">
                     <div className="grid-container">
-                        <img src="/assets/grid1.png" alt="grid-1" className="w-full sm:h-[276px] h-fit object-contain"/>
+                        <div className="bg-gray-500 rounded-lg w-full aspect-square overflow-hidden">
+                            <img src="/assets/ghibli-headshot-2.png" alt="Darshil Desai Headshot" className="w-full h-full object-cover"/>
+                        </div>
                         <div>
                             <p className="grid-headtext"> Hi, I am Darshil </p>
                             <p className="grid-subtext"> I'm a junior in college passionate about software development. I have hands-on experience building full-stack applications that solve real-world problems.</p>
@@ -61,7 +63,7 @@ const About = () => {
                                         }
                                     }}
                                 >
-                                    <div className="tech-stack group-hover:bg-neutral-100 group-hover:bg-opacity-20 transition-all duration-300">
+                                    <div className="tech-stack group-hover:bg-neutral-100 group-hover:bg-opacity-20 transition-all animate-in fade-in duration-1000">
                                         <img src={tech.src} alt={tech.name} className="w-25 h-25 object-contain" />
                                     </div>
                                     <div className="tooltip fixed opacity-0 group-hover:opacity-100 px-2 py-1 bg-gray-800 rounded-md text-white text-xs whitespace-nowrap transition-opacity duration-300 pointer-events-none z-50">

@@ -37,17 +37,17 @@ export const myProjects = [
         tags: [
             {
                 id: 6,
-                name: 'Puter.js',
+                name: 'PuterJS',
                 path: '/assets/puter-logo.png',
             },
             {
                 id: 1,
-                name: 'React.js',
+                name: 'ReactJS',
                 path: '/assets/react.svg',
             },
             {
                 id: 2,
-                name: 'TailwindCSS',
+                name: 'Tailwind CSS',
                 path: 'assets/tailwindcss.png',
             },
             {
@@ -71,22 +71,22 @@ export const myProjects = [
         spotlight: '/assets/spotlight5.png',
         tags: [
             {
-                id: 6,
+                id: 1,
                 name: 'AppWrite',
                 path: '/assets/appwrite-logo.png',
             },
             {
-                id: 1,
-                name: 'React.js',
+                id: 2,
+                name: 'ReactJS',
                 path: '/assets/react.svg',
             },
             {
-                id: 2,
-                name: 'TailwindCSS',
+                id: 3,
+                name: 'Tailwind CSS',
                 path: 'assets/tailwindcss.png',
             },
             {
-                id: 5,
+                id: 4,
                 name: 'JavaScript',
                 path: '/assets/javascript.png',
             },
@@ -107,12 +107,12 @@ export const myProjects = [
         tags: [
             {
                 id: 1,
-                name: 'React.js',
+                name: 'ReactJS',
                 path: '/assets/react.svg',
             },
             {
                 id: 2,
-                name: 'TailwindCSS',
+                name: 'Tailwind CSS',
                 path: 'assets/tailwindcss.png',
             },
             {
@@ -122,7 +122,7 @@ export const myProjects = [
             },
             {
                 id: 4,
-                name: 'ThreeJs',
+                name: 'ThreeJS',
                 path: '/assets/threejs.png',
             }
         ],
@@ -147,7 +147,7 @@ export const myProjects = [
             },
             {
                 id: 2,
-                name: 'Vpp',
+                name: 'Visual Paradigm',
                 path: 'assets/vpp.png',
             },
             {
