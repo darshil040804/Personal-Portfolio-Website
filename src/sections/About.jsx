@@ -17,23 +17,19 @@ const About = () => {
         { name: 'HTML', src: '/assets/html.png' },
         { name: 'CSS', src: '/assets/css.png' },
         { name: 'JavaScript', src: '/assets/javascript.png' },
-        { name: 'React', src: '/assets/react.svg' },
+        { name: 'ReactJS', src: '/assets/react.svg' },
         { name: 'Tailwind CSS', src: '/assets/tailwindcss.png' },
         { name: 'C++', src: '/assets/cpp.png' },
         { name: 'Git', src: '/assets/git.png' },
         { name: 'GitHub', src: '/assets/github.svg' },
         { name: 'Figma', src: '/assets/figma.svg' },
-        { name: 'Three.js', src: '/assets/threejs.png' },
-        { name: 'HTML', src: '/assets/html.png' },
-        { name: 'CSS', src: '/assets/css.png' },
-        { name: 'JavaScript', src: '/assets/javascript.png' },
-        { name: 'React', src: '/assets/react.svg' },
-        { name: 'Tailwind CSS', src: '/assets/tailwindcss.png' },
-        { name: 'C++', src: '/assets/cpp.png' },
-        { name: 'Git', src: '/assets/git.png' },
-        { name: 'GitHub', src: '/assets/github.svg' },
+        { name: 'ThreeJS', src: '/assets/threejs.png' },
+        { name: 'Appwrite', src: '/assets/appwrite-logo.png' },
+        { name: 'PuterJS', src: '/assets/puter-logo.png' },
         { name: 'Figma', src: '/assets/figma.svg' },
-        { name: 'Three.js', src: '/assets/threejs.png' },
+        { name: 'ThreeJS', src: '/assets/threejs.png' },
+        { name: 'Appwrite', src: '/assets/appwrite-logo.png' },
+        { name: 'PuterJS', src: '/assets/puter-logo.png' },
         // You can easily add more technologies here in the future!
     ];
 
@@ -50,12 +46,12 @@ const About = () => {
                     </div>
                 </div>
                 <div className="col-span-1 xl:row-span-3">
-                    <div className="grid-container justify-center items-center">
+                    <div className="grid-container">
                         {/* Tech Stack section moved to the bottom with appropriate padding */}
-                        <div className="grid grid-cols-4 gap-4 justify-items-center">
-                            {technologies.map((tech) => (
+                        <div className="grid grid-cols-4 gap-5 mb-2">
+                            {technologies.map((tech, index) => (
                                 <div
-                                    key={tech.name}
+                                    key={index}
                                     className="relative group"
                                     onMouseMove={(e) => {
                                         const tooltip = e.currentTarget.querySelector('.tooltip');
@@ -65,8 +61,8 @@ const About = () => {
                                         }
                                     }}
                                 >
-                                    <div className="tech-logo group-hover:bg-neutral-100 group-hover:bg-opacity-20 transition-all duration-300">
-                                        <img src={tech.src} alt={tech.name} className="w-12 h-12 object-contain" />
+                                    <div className="tech-stack group-hover:bg-neutral-100 group-hover:bg-opacity-20 transition-all duration-300">
+                                        <img src={tech.src} alt={tech.name} className="w-25 h-25 object-contain" />
                                     </div>
                                     <div className="tooltip fixed opacity-0 group-hover:opacity-100 px-2 py-1 bg-gray-800 rounded-md text-white text-xs whitespace-nowrap transition-opacity duration-300 pointer-events-none z-50">
                                         {tech.name}
