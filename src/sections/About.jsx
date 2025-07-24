@@ -9,9 +9,34 @@ const About = () => {
         navigator.clipboard.writeText('darshil.desai.040804@gmail.com');
         setHasCopied(true);
         setTimeout(() => {
-          setHasCopied(false)
+            setHasCopied(false)
         }, 2000);
     }
+
+    const technologies = [
+        { name: 'HTML', src: '/assets/html.png' },
+        { name: 'CSS', src: '/assets/css.png' },
+        { name: 'JavaScript', src: '/assets/javascript.png' },
+        { name: 'React', src: '/assets/react.svg' },
+        { name: 'Tailwind CSS', src: '/assets/tailwindcss.png' },
+        { name: 'C++', src: '/assets/cpp.png' },
+        { name: 'Git', src: '/assets/git.png' },
+        { name: 'GitHub', src: '/assets/github.svg' },
+        { name: 'Figma', src: '/assets/figma.svg' },
+        { name: 'Three.js', src: '/assets/threejs.png' },
+        { name: 'HTML', src: '/assets/html.png' },
+        { name: 'CSS', src: '/assets/css.png' },
+        { name: 'JavaScript', src: '/assets/javascript.png' },
+        { name: 'React', src: '/assets/react.svg' },
+        { name: 'Tailwind CSS', src: '/assets/tailwindcss.png' },
+        { name: 'C++', src: '/assets/cpp.png' },
+        { name: 'Git', src: '/assets/git.png' },
+        { name: 'GitHub', src: '/assets/github.svg' },
+        { name: 'Figma', src: '/assets/figma.svg' },
+        { name: 'Three.js', src: '/assets/threejs.png' },
+        // You can easily add more technologies here in the future!
+    ];
+
     return (
         <section className="c-space my-20" id="about">
             <div className="grid xl:grid-cols-3 xl:grid-rows-6 md:grid-cols-2 grid-cols-1 gap-5 h-full">
@@ -26,10 +51,32 @@ const About = () => {
                 </div>
                 <div className="col-span-1 xl:row-span-3">
                     <div className="grid-container justify-center items-center">
-                        <img src="/assets/grid2.png" alt="grid-2" className="w-full sm:w-[276px] h-fit object-contain justify-center items-center"/>
-                        <div>
+                        {/* Tech Stack section moved to the bottom with appropriate padding */}
+                        <div className="grid grid-cols-4 gap-4 justify-items-center">
+                            {technologies.map((tech) => (
+                                <div
+                                    key={tech.name}
+                                    className="relative group"
+                                    onMouseMove={(e) => {
+                                        const tooltip = e.currentTarget.querySelector('.tooltip');
+                                        if (tooltip) {
+                                            tooltip.style.left = `${e.clientX + 10}px`;
+                                            tooltip.style.top = `${e.clientY + 10}px`;
+                                        }
+                                    }}
+                                >
+                                    <div className="tech-logo group-hover:bg-neutral-100 group-hover:bg-opacity-20 transition-all duration-300">
+                                        <img src={tech.src} alt={tech.name} className="w-20 h-20 object-contain" />
+                                    </div>
+                                    <div className="tooltip fixed opacity-0 group-hover:opacity-100 bg-black-300 rounded-md text-white text-xs whitespace-nowrap transition-opacity duration-300 pointer-events-none z-50">
+                                        {tech.name}
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                        <div className="mt-6">
                             <p className="grid-headtext"> Tech Stack</p>
-                            <p className="grid-subtext"> I am proficient in Python, C++, Java, Html, CSS, JavaScript & SQL </p>
+                            <p className="grid-subtext mt-2"> I am proficient in Python, C++, Java, Html, CSS, JavaScript & SQL </p>
                         </div>
                     </div>
                 </div>
@@ -39,7 +86,7 @@ const About = () => {
                             <Globe height={326} width={326} backgroundColor="rgba(0,0,0,0)" backgroundImageOpacity={0.5}
                                    showAtmosphere showGraticules globeImageUrl="//unpkg.com/three-globe/example/img/earth-night.jpg"
                                    bumpImageUrl="//unpkg.com/three-globe/example/img/earth-topology.png"
-                                   />
+                            />
                         </div>
                         <div>
                             <p className="grid-headtext">
