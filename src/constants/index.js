@@ -27,7 +27,8 @@ export const myProjects = [
         desc: 'JobLens AI is an AI-powered resume analysis tool that scores resumes based on job descriptions, providing both a resume score and ATS score. It offers detailed feedback on what to add, remove, or replace for better optimization. Built with React JS, React Router v7, and TailwindCSS, it uses Puterjs for cloud storage and AI features, allowing users to sign in with their Puter account and access all previous analyses in one place.',
         subdesc:
             '',
-        href: 'https://job-lens-ai.vercel.app/',
+        href: 'https://github.com/darshil040804/JobLens-AI',
+        liveLink: 'https://job-lens-ai.vercel.app/',
         texture: '/textures/project/project4.mp4',
         logo: '/assets/project-logo4.png',
         logoStyle: {
@@ -61,7 +62,8 @@ export const myProjects = [
         desc: 'Movie Hub is a movie search app powered by the TMDB API and Appwrite backend. Users can search movies and view posters, ratings, release year, etc. The app logs search activity in a database and displays the top 5 most-searched movies in a dynamic "Trending" section. Features include API request debouncing, responsive UI with TailwindCSS, and full-stack integration using JavaScript, HTML, and Appwrite for real-time data handling.',
         subdesc:
             '',
-        href: 'https://movie-hub-guc4.vercel.app/',
+        href: 'https://github.com/darshil040804/Movie-Hub',
+        liveLink: 'https://movie-hub-guc4.vercel.app/',
         texture: '/textures/project/project3.mp4',
         logo: '/assets/project-logo3.png',
         logoStyle: {
@@ -96,6 +98,7 @@ export const myProjects = [
         subdesc:
             '',
         href: 'https://github.com/darshil040804/Personal-Portfolio-Website',
+        liveLink: 'https://darshilmukeshdesai.com/',
         texture: '/textures/project/project1.mp4',
         logo: '/assets/portfolio-logo.png',
         logoStyle: {
@@ -129,7 +132,8 @@ export const myProjects = [
         desc: 'Spartanmind is a C++-powered variant of the classic Mastermind game—challenge yourself to guess a hidden word in as few attempts as possible—featuring a polished GUI built with WxWidgets and rapid UI prototyping via wxBuilder, UML design and workflow management in Visual Paradigm, documentation via DoxyWizard, and full GitLab version control to ensure maintainability and seamless collaboration.',
         subdesc:
             '',
-        href: '',
+        href: 'https://github.com/darshil040804/SpartanMind',
+        liveLink: '',
         texture: '/textures/project/project2.mp4',
         logo: '/assets/project-logo2.png',
         logoStyle: {

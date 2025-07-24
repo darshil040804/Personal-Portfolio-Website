@@ -94,17 +94,28 @@ const Projects = () => {
                         ))}
                     </div>
 
-                    {/* GitHub link (text only clickable, un-bolded) */}
-                    <div className="px-2">
+                    {/* Project links as buttons (positioned on the left) */}
+                    <div className="px-2 flex gap-4">
                         <a
                             href={myProjects[current].href}
                             target="_blank"
                             rel="noreferrer"
-                            className="text-white hover:underline"
+                            className="px-4 py-2 rounded-lg bg-gradient-to-r from-purple-500/70 to-blue-500/70 text-white hover:from-purple-600/70 hover:to-blue-600/70 transition-all flex items-center"
                         >
                             Check GitHub Repo
+                            <img src="/assets/arrow-up.png" alt="arrow" className="w-3 h-3 inline-block ml-1" />
                         </a>
-                        <img src="/assets/arrow-up.png" alt="arrow" className="w-3 h-3 inline-block ml-1" />
+                        {myProjects[current].liveLink && (
+                            <a
+                                href={myProjects[current].liveLink}
+                                target="_blank"
+                                rel="noreferrer"
+                                className="px-4 py-2 rounded-lg bg-gradient-to-r from-green-500/70 to-teal-500/70 text-white hover:from-green-600/70 hover:to-teal-600/70 transition-all flex items-center"
+                            >
+                                Check Live Link
+                                <img src="/assets/arrow-up.png" alt="arrow" className="w-3 h-3 inline-block ml-1" />
+                            </a>
+                        )}
                     </div>
 
                     {/* Controls: Prev, Dots, Next (below link) */}
@@ -148,9 +159,17 @@ const Projects = () => {
 
                 {/* RIGHT: persistent 3D canvas */}
                 <div className="hidden lg:block border border-black-300 bg-black-200 rounded-lg h-96 md:h-full">
-                    <Canvas>
+                    <Canvas 
+                        gl={{ 
+                            antialias: true,
+                            alpha: true,
+                            preserveDrawingBuffer: true,
+                            powerPreference: "high-performance"
+                        }}
+                        dpr={[1, 2]} // Responsive to device pixel ratio for better quality on high-DPI displays
+                    >
                         <ambientLight intensity={3} />
-                        <directionalLight position={[10, 10, 5]} />
+                        <directionalLight position={[10, 10, 5]} intensity={1.5} />
                         <Suspense fallback={<CanvasLoader />}>
                             <Center>
                                 <group scale={2} position={[0, -3, 0]} rotation={[0, -0.1, 0]}>

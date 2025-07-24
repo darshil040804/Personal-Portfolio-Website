@@ -6,15 +6,29 @@ import React, {useEffect, useRef} from 'react'
 import {useGLTF, useVideoTexture} from '@react-three/drei'
 import {useGSAP} from "@gsap/react";
 import { gsap } from 'gsap'
+import * as THREE from 'three'
 
 const DemoComputer = (props) => {
     const group = useRef();
     const { nodes, materials } = useGLTF('/models/computer.glb')
-    const txt = useVideoTexture(props.texture? props.texture : '/textures/project/project1.mp4')
+
+    // Enhanced video texture with quality options
+    const txt = useVideoTexture(props.texture? props.texture : '/textures/project/project1.mp4', {
+        unsuspend: 'canplay', // Start playing when enough data is available
+        crossOrigin: 'Anonymous', // Handle cross-origin videos
+        muted: true, // Mute the video to ensure autoplay
+        loop: true, // Loop the video
+        start: true, // Start playing immediately
+    })
 
     useEffect(() => {
         if(txt) {
             txt.flipY = false;
+            // Enhance texture quality
+            txt.minFilter = THREE.LinearFilter;
+            txt.magFilter = THREE.LinearFilter;
+            txt.generateMipmaps = false; // Disable mipmaps for videos
+            txt.needsUpdate = true;
         }
     })
 
@@ -40,7 +54,13 @@ const DemoComputer = (props) => {
                     rotation={[1.571, -0.005, 0.031]}
                     scale={[0.661, 0.608, 0.401]}
                 >
-                    <meshBasicMaterial map={txt}/>
+                    <meshBasicMaterial 
+                        map={txt}
+                        toneMapped={false}
+                        colorSpace={THREE.SRGBColorSpace}
+                        transparent={true}
+                        opacity={1}
+                    />
                 </mesh>
                 <group
                     name="RootNode"
