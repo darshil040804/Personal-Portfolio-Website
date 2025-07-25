@@ -37,13 +37,13 @@ const About = () => {
         <section className="c-space my-20" id="about">
             <div className="grid xl:grid-cols-3 xl:grid-rows-6 md:grid-cols-2 grid-cols-1 gap-5 h-full">
                 <div className="col-span-1 xl:row-span-3">
-                    <div className="grid-container">
-                        <div className="bg-gray-500 rounded-lg w-full aspect-square overflow-hidden">
-                            <img src="/assets/ghibli-headshot-2.png" alt="Darshil Desai Headshot" className="w-full h-full object-cover"/>
+                    <div className="grid-container p-8 sm:p-11">
+                        <div className="border border-white-300 bg-gray-500 rounded-lg w-full aspect-square overflow-hidden">
+                            <img src="/assets/ghibli-headshot.png" alt="Darshil Desai Headshot" className="w-full h-full object-cover"/>
                         </div>
-                        <div>
+                        <div className="mt-6">
                             <p className="grid-headtext"> Hi, I am Darshil </p>
-                            <p className="grid-subtext"> I'm a junior in college passionate about software development. I have hands-on experience building full-stack applications that solve real-world problems.</p>
+                            <p className="grid-subtext"> Having 2 years of experience, I have honed my skills in full-stack app development.</p>
                         </div>
                     </div>
                 </div>
@@ -88,13 +88,13 @@ const About = () => {
                         </div>
                         <div>
                             <p className="grid-headtext">
-                                Location
+                                I work remotely across most timezones
                             </p>
                             <p className="grid-subtext">
-                                I'm based in East Lansing, MI, with remote work available
+                                I'm based in East Lansing, MI, with remote work available. I'm also open to relocation within USA
                             </p>
                             <a href={ navLinks[3].href } className={"w-fit"}>
-                                <Button name="Contact Me" isBeam containerClass="w-full mt-10"/>
+                                <Button name="Contact Me" isBeam containerClass="w-full mt-20"/>
                             </a>
                         </div>
                     </div>
@@ -103,11 +103,11 @@ const About = () => {
                     <div className="grid-container">
                         <img src="/assets/grid3.png" alt="grid-3" className="w-full sm:h-[266px] h-fit object-contain" />
                         <div>
-                            <p className="grid-headtext">
+                            <p className="grid-headtext mt-10">
                                 My passion for coding
                             </p>
                             <p className="grid-subtext">
-                                I love solving problems and building products through code. Coding isn't just my profession, it is my passion
+                                I love turning ideas into real things through code. Solving tricky problems and building products feels like solving puzzles and that’s what keeps me hooked. Coding isn’t just work for me, it’s something I genuinely enjoy doing every day.
                             </p>
                         </div>
                     </div>
@@ -115,7 +115,7 @@ const About = () => {
                 <div className="xl:col-span-1 xl:row-span-2">
                     <div className="grid-container">
                         <img src="/assets/grid4.png" alt="grid-4" className="w-full md:h-[126px] sm:h-[276px] h-fit object-cover sm:object-top" />
-                        <div className="space-y-2">
+                        <div className="mt-6">
                             <p className="grid-subtext text-center">
                                 Contact Me
                             </p>
