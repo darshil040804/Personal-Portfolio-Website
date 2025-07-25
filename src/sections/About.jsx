@@ -114,7 +114,7 @@ const About = () => {
                 </div>
                 <div className="xl:col-span-1 xl:row-span-2">
                     <div className="grid-container">
-                        <img src="/assets/grid4.png" alt="grid-4" className="w-full md:h-[126px] sm:h-[224px] h-fit object-cover sm:object-top" />
+                        <img src="/assets/grid4.png" alt="grid-4" className="w-full md:h-[126px] sm:h-[126px] h-fit object-cover sm:object-top" />
                         <div className="mt-6">
                             <p className="grid-subtext text-center">
                                 Contact Me
