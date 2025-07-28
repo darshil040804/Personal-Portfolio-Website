@@ -14,22 +14,25 @@ const About = () => {
     }
 
     const technologies = [
-        { name: 'HTML', src: '/assets/html.png' },
-        { name: 'CSS', src: '/assets/css.png' },
-        { name: 'JavaScript', src: '/assets/javascript.png' },
-        { name: 'ReactJS', src: '/assets/react.svg' },
-        { name: 'Tailwind CSS', src: '/assets/tailwindcss.png' },
-        { name: 'C++', src: '/assets/cpp.png' },
-        { name: 'Git', src: '/assets/git.png' },
-        { name: 'GitHub', src: '/assets/github.svg' },
-        { name: 'Figma', src: '/assets/figma.svg' },
-        { name: 'ThreeJS', src: '/assets/threejs.png' },
-        { name: 'Appwrite', src: '/assets/appwrite-logo.png' },
-        { name: 'PuterJS', src: '/assets/puter-logo.png' },
-        { name: 'NextJS', src: '/assets/nextjs.png' },
-        { name: 'NodeJS', src: '/assets/node-js.png' },
         { name: 'Python', src: '/assets/python.png' },
         { name: 'Java', src: '/assets/java.png' },
+        { name: 'C++', src: '/assets/cpp.png' },
+        { name: 'JavaScript', src: '/assets/javascript.png' },
+        { name: 'HTML', src: '/assets/html.png' },
+        { name: 'CSS', src: '/assets/css.png' },
+        { name: 'ReactJS', src: '/assets/react.svg' },
+        { name: 'Tailwind CSS', src: '/assets/tailwindcss.png' },
+        { name: 'NextJS', src: '/assets/nextjs.png' },
+        { name: 'NodeJS', src: '/assets/node-js.png' },
+        { name: 'MongoDB', src: '/assets/mongo-db.png' },
+        { name: 'ThreeJS', src: '/assets/threejs.png' },
+        { name: 'Git', src: '/assets/git.png' },
+        { name: 'GitHub', src: '/assets/github.svg' },
+        { name: 'Appwrite', src: '/assets/appwrite-logo.png' },
+        { name: 'PuterJS', src: '/assets/puter-logo.png' },
+
+
+
         // You can easily add more technologies here in the future!
     ];
 

@@ -36,22 +36,22 @@ export const myProjects = [
         spotlight: '/assets/spotlight4.png',
         tags: [
             {
-                id: 6,
+                id: 1,
                 name: 'PuterJS',
                 path: '/assets/puter-logo.png',
             },
             {
-                id: 1,
+                id: 2,
                 name: 'ReactJS',
                 path: '/assets/react.svg',
             },
             {
-                id: 2,
+                id: 3,
                 name: 'Tailwind CSS',
                 path: 'assets/tailwindcss.png',
             },
             {
-                id: 5,
+                id: 4,
                 name: 'JavaScript',
                 path: '/assets/javascript.png',
             },
@@ -72,7 +72,7 @@ export const myProjects = [
         tags: [
             {
                 id: 1,
-                name: 'AppWrite',
+                name: 'Appwrite',
                 path: '/assets/appwrite-logo.png',
             },
             {
