@@ -180,7 +180,7 @@ export const workExperiences = [
     {
         id: 1,
         name: 'MSU - IPF',
-        pos: 'Student Software Developer',
+        pos: 'Software Engineering Intern',
         duration: 'January 2025 - Present',
         title: "Built Java based REST APIs for web and mobile applications and used Postman to test them. Leveraged Gitlab for version control, resolving Jira tickets related to bug fixes and system optimization, improving daily usability for 700+ IPF employees",
         icon: '/assets/msu-ipf-logo.png',
