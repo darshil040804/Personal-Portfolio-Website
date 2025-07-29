@@ -40,7 +40,7 @@ const About = () => {
         <section className="c-space my-20" id="about">
             <div className="grid xl:grid-cols-3 xl:grid-rows-6 md:grid-cols-2 grid-cols-1 gap-5 h-full">
                 <div className="col-span-1 xl:row-span-3">
-                    <div className="grid-container p-8 sm:p-11">
+                    <div className="grid-container p-11 sm:p-11">
                         <div className="border border-white-300 bg-gray-500 rounded-lg w-full aspect-square overflow-hidden">
                             <img src="/assets/ghibli-headshot.png" alt="Darshil Desai Headshot" className="w-full h-full object-cover"/>
                         </div>
