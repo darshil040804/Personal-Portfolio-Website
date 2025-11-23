@@ -5,7 +5,6 @@ import {HackerRoom} from "../components/HackerRoom.jsx";
 import CanvasLoader from "../components/CanvasLoader.jsx";
 import {useMediaQuery} from "react-responsive";
 import {calculateSizes} from "../constants/index.js";
-import Target from "../components/Target.jsx";
 import ReactLogo from "../components/ReactLogo.jsx";
 import Cube from "../components/Cube.jsx";
 import Rings from "../components/Rings.jsx";
@@ -47,7 +46,6 @@ const Hero = () => {
                     </Suspense>
                     {!isMobile && !isSmall && (
                         <group>
-                            <Target position = {sizes.targetPosition}/>
                             <ReactLogo position = {sizes.reactLogoPosition}/>
                             <Cube position = {sizes.cubePosition}/>
                             <Rings position = {sizes.ringPosition}/>
