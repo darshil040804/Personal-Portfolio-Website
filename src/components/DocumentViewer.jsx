@@ -4,10 +4,7 @@ import 'react-pdf/dist/Page/AnnotationLayer.css';
 import 'react-pdf/dist/Page/TextLayer.css';
 import { FiArrowLeft, FiDownload, FiExternalLink, FiInfo, FiMinus, FiPlus } from 'react-icons/fi';
 
-pdfjs.GlobalWorkerOptions.workerSrc = new URL(
-    'pdfjs-dist/build/pdf.worker.min.mjs',
-    import.meta.url,
-).toString();
+pdfjs.GlobalWorkerOptions.workerSrc = '/pdf.worker.min.js';
 
 const MIN_ZOOM = 0.8;
 const MAX_ZOOM = 2;
@@ -111,7 +108,10 @@ const DocumentViewer = ({ document }) => {
                             file={document.pdfUrl}
                             loading={<div className="document-load-state">Loading preview…</div>}
                             onLoadSuccess={({ numPages: pages }) => setNumPages(pages)}
-                            onLoadError={() => setLoadError('Unable to load PDF')}
+                            onLoadError={(error) => {
+                                console.error('PDF preview failed:', error);
+                                setLoadError(error?.message || 'Unable to load PDF');
+                            }}
                         >
                             {previewWidth > 0 && Array.from({ length: numPages }, (_, index) => (
                                 <Page
