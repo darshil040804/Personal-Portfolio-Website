@@ -36,9 +36,12 @@ const Contact = () => {
             setStatus({ type: 'success', message: 'Thanks! Your message has been sent.' });
         } catch (error) {
             console.error('EmailJS submission failed:', error);
+            const needsReconnect = error?.status === 412 && error?.text?.includes('Invalid grant');
             setStatus({
                 type: 'error',
-                message: 'Something went wrong. Please try again or email me directly.',
+                message: needsReconnect
+                    ? 'The contact form is temporarily unavailable. Please email me directly while I reconnect it.'
+                    : 'Something went wrong. Please try again or email me directly.',
             });
         }
     };
