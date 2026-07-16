@@ -18,7 +18,7 @@ const DocumentViewer = ({ document }) => {
     const [numPages, setNumPages] = useState(0);
     const [previewWidth, setPreviewWidth] = useState(0);
     const [loadError, setLoadError] = useState('');
-    const [zoom, setZoom] = useState(() => (window.innerWidth <= 720 ? 1.2 : 1));
+    const [zoom, setZoom] = useState(1);
 
     useEffect(() => {
         const previousTitle = window.document.title;
