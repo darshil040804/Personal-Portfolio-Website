@@ -610,6 +610,18 @@ a.resource-button:hover {
   gap: 0.9rem;
 }
 
+.snapshot-education-link {
+  margin: -0.65rem;
+  padding: 0.65rem;
+  border-radius: 0.7rem;
+  transition: background-color 180ms ease, transform 180ms ease;
+}
+
+.snapshot-education-link:hover {
+  background: rgba(180, 169, 255, 0.07);
+  transform: translateY(-1px);
+}
+
 .snapshot-icon {
   width: 2.8rem;
   height: 2.8rem;

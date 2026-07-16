@@ -95,7 +95,11 @@ const Hero = () => (
             </div>
             <div className="snapshot-section">
                 <h3>Education</h3>
-                <div className="snapshot-detail">
+                <a
+                    className="snapshot-detail snapshot-education-link"
+                    href={transcriptUrl}
+                    aria-label="View official Michigan State University transcript"
+                >
                     <div className="snapshot-icon">
                         <img src="/assets/msu-logo.png" alt="Michigan State University Spartan logo" />
                     </div>
@@ -103,19 +107,8 @@ const Hero = () => (
                         <strong>Michigan State University</strong>
                         <p>Bachelor of Science in Computer Science</p>
                         <b>GPA 4.0</b>
-                        {transcriptUrl ? (
-                            <a className="snapshot-document-link" href={transcriptUrl}>
-                                <FiFileText aria-hidden="true" />
-                                View transcript
-                            </a>
-                        ) : (
-                            <button className="snapshot-document-link" type="button" disabled>
-                                <FiFileText aria-hidden="true" />
-                                Transcript coming soon
-                            </button>
-                        )}
                     </div>
-                </div>
+                </a>
             </div>
             <div className="snapshot-section">
                 <h3>Mobility</h3>
