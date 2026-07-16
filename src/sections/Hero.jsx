@@ -124,7 +124,7 @@ const Hero = () => (
                         <FiMapPin aria-hidden="true" />
                     </div>
                     <div className="snapshot-copy">
-                        <strong>Open to relocation anywhere in the USA</strong>
+                        <strong>Open to working remotely or to relocate anywhere within the USA</strong>
                     </div>
                 </div>
             </div>

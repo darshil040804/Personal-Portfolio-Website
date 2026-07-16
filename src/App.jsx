@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { lazy, Suspense, useEffect } from 'react';
 import Navbar from './sections/Navbar.jsx';
 import Hero from './sections/Hero.jsx';
 import About from './sections/About.jsx';
@@ -8,8 +8,9 @@ import Experience from './sections/Experience.jsx';
 import Contact from './sections/Contact.jsx';
 import Footer from './sections/Footer.jsx';
 import BackToTop from './components/BackToTop.jsx';
-import DocumentViewer from './components/DocumentViewer.jsx';
 import { documentDefinitions } from './constants/index.js';
+
+const DocumentViewer = lazy(() => import('./components/DocumentViewer.jsx'));
 
 const App = () => {
     const documentKey = new URLSearchParams(window.location.search).get('document');
@@ -68,7 +69,13 @@ const App = () => {
         };
     }, []);
 
-    if (activeDocument) return <DocumentViewer document={activeDocument} />;
+    if (activeDocument) {
+        return (
+            <Suspense fallback={<main className="document-loading">Loading document viewer…</main>}>
+                <DocumentViewer document={activeDocument} />
+            </Suspense>
+        );
+    }
 
     return (
         <>
