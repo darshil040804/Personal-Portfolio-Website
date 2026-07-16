@@ -1,139 +1,115 @@
-import React, {useRef, useState} from 'react';
+import { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
+import { FiArrowUpRight, FiMail } from 'react-icons/fi';
+
+const initialForm = { name: '', email: '', message: '' };
+
 const Contact = () => {
+    const formRef = useRef(null);
+    const [form, setForm] = useState(initialForm);
+    const [status, setStatus] = useState({ type: 'idle', message: '' });
 
-    const formRef = useRef();
-    const [loading, setLoading] = useState(false);
-    const [form, setForm] = useState({
-        name: '',
-        email:'',
-        message:''
-    })
+    const handleChange = ({ target: { name, value } }) => {
+        setForm((current) => ({ ...current, [name]: value }));
+        if (status.type !== 'idle') setStatus({ type: 'idle', message: '' });
+    };
 
-    const handleChange = ({target: {name, value}}) => {
-        setForm({...form, [name]: value})
-    }
+    const handleSubmit = async (event) => {
+        event.preventDefault();
+        if (status.type === 'loading') return;
 
-    // service_uwhhe8t
-
-    const handleSubmit = (e) => {
-        e.preventDefault();
-
-        setLoading(true);
-
-        try{
-        emailjs.send('service_uwhhe8t', 'template_0yp04aa',
-            {
-                from_name: form.name,
-                to_name: 'Darshil',
-                from_email: form.email,
-                to_email: 'darshil.desai.040804@gmail.com',
-                message: form.message
-            }, '_h2GC9sGHbbG58RJR')
-
-            setLoading(false);
-
-            alert('Your message has been sent!')
-
-            setForm({
-                name:'',
-                email:'',
-                message:''
-            })
-
-        } catch (error){
-            setLoading(false);
-
-            console.log(error);
-
-            alert('Something went wrong!')
+        setStatus({ type: 'loading', message: 'Sending your message…' });
+        try {
+            await emailjs.send(
+                'service_uwhhe8t',
+                'template_0yp04aa',
+                {
+                    from_name: form.name,
+                    to_name: 'Darshil',
+                    from_email: form.email,
+                    to_email: 'darshil.desai.040804@gmail.com',
+                    message: form.message,
+                },
+                '_h2GC9sGHbbG58RJR',
+            );
+            setForm(initialForm);
+            setStatus({ type: 'success', message: 'Thanks! Your message has been sent.' });
+        } catch (error) {
+            console.error('EmailJS submission failed:', error);
+            setStatus({
+                type: 'error',
+                message: 'Something went wrong. Please try again or email me directly.',
+            });
         }
+    };
 
-    }
+    const isLoading = status.type === 'loading';
 
     return (
-        <section className="c-space my-20" id="contact">
-                  <div className="relative min-h-screen flex items-center justify-center flex-col">
-                    {/* ─── WINDOWS‑STYLE TERMINAL FRAME ─── */}
-                    <div className="flex absolute inset-0 items-center justify-center">
-                      <div className="w-full sm:max-w-5xl rounded-lg shadow-lg overflow-hidden">
-
-                        {/* ─── Title Bar ─── */}
-                        <div className="flex justify-end items-center bg-gray-600">
-                          <img
-                            src="/assets/windows-buttons.png"
-                            alt="Window Controls"
-                            className="h-10"
-                          />
-                        </div>
-
-                        {/* ─── Terminal Body ─── */}
-                        <div
-                          className="p-6"
-                          style={{
-                            backgroundColor: '#111',              // fallback
-                            backgroundImage: 'url(/assets/terminal-texture.png)',
-                            backgroundSize:    'cover',
-                            backgroundRepeat:  'no-repeat',
-                          }}
-                        >
-                          <div className="contact-container w-full max-w-2xl mx-auto px-4">
-                    <h3 className="head-text">Let's Talk</h3>
-                    <p className="text-lg text-white-600 mt-3">
-                        Let's talk
-                    </p>
-
-                    <form ref={formRef} onSubmit={handleSubmit} className="mt-12 flex flex-col space-y-7">
-                        <label className="space-y-3">
-                            <span className="field-label">
-                                Full Name
-                            </span>
-                            <input
-                                type="text"
-                            name="name"
-                            value={form.name}
-                            onChange={handleChange}
-                            required
-                            className="field-input"
-                            placeholder="Jackson Paul"/>
-                        </label>
-                        <label className="space-y-3">
-                            <span className="field-label">
-                                Email
-                            </span>
-                            <input
-                                type="email"
-                                name="email"
-                                value={form.email}
-                                onChange={handleChange}
-                                required
-                                className="field-input"
-                                placeholder="jackson@gmail.com"/>
-                        </label>
-                        <label className="space-y-3">
-                            <span className="field-label">
-                                Your Message
-                            </span>
-                            <textarea
-                                name="message"
-                                value={form.message}
-                                onChange={handleChange}
-                                required
-                                rows={5}
-                                className="field-input"
-                                placeholder="Hi, I have a job for you ..."/>
-                        </label>
-                        <button className="field-btn" type="submit" disabled={loading}>
-                            {loading ? 'Sending...' : 'Send Message'}
-                            <img src="/assets/arrow-up.png" alt="arrow-up" className="field-btn_arrow" />
-                        </button>
-                    </form>
-                </div>
+        <section className="section-shell contact-section scroll-mt-24" id="contact" aria-labelledby="contact-heading">
+            <div className="contact-intro">
+                <p className="eyebrow">Get in touch</p>
+                <h2 id="contact-heading">Have a project or opportunity in mind?</h2>
+                <p>I&apos;m always happy to discuss software, new ideas, and ways we can work together.</p>
+                <a className="email-link" href="mailto:darshil.desai.040804@gmail.com">
+                    <FiMail aria-hidden="true" />
+                    darshil.desai.040804@gmail.com
+                </a>
             </div>
-          </div>
-        </div>
-      </div>
-</section>
-    )
-}
-export default Contact
+
+            <form ref={formRef} onSubmit={handleSubmit} className="contact-form">
+                <div className="field-group">
+                    <label htmlFor="name">Full name</label>
+                    <input
+                        id="name"
+                        type="text"
+                        name="name"
+                        value={form.name}
+                        onChange={handleChange}
+                        autoComplete="name"
+                        required
+                        placeholder="Your name"
+                    />
+                </div>
+                <div className="field-group">
+                    <label htmlFor="email">Email address</label>
+                    <input
+                        id="email"
+                        type="email"
+                        name="email"
+                        value={form.email}
+                        onChange={handleChange}
+                        autoComplete="email"
+                        required
+                        placeholder="you@example.com"
+                    />
+                </div>
+                <div className="field-group">
+                    <label htmlFor="message">Message</label>
+                    <textarea
+                        id="message"
+                        name="message"
+                        value={form.message}
+                        onChange={handleChange}
+                        required
+                        rows={6}
+                        placeholder="Tell me a little about what you have in mind…"
+                    />
+                </div>
+                <button className="primary-button submit-button" type="submit" disabled={isLoading}>
+                    {isLoading ? 'Sending…' : 'Send message'}
+                    {!isLoading && <FiArrowUpRight aria-hidden="true" />}
+                </button>
+                <p
+                    className={`form-status form-status-${status.type}`}
+                    role="status"
+                    aria-live="polite"
+                >
+                    {status.message}
+                </p>
+            </form>
+        </section>
+    );
+};
+
+export default Contact;

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title">
+  <title id="title">Darshil Desai monogram</title>
+  <rect width="64" height="64" rx="16" fill="#0c0e13"/>
+  <path d="M14 14h15c12.7 0 21 7 21 18s-8.3 18-21 18H14V14Zm14.5 27.5c7.6 0 12-3.4 12-9.5s-4.4-9.5-12-9.5h-5v19h5Z" fill="#f4f3ff"/>
+  <rect x="46" y="45" width="8" height="8" rx="4" fill="#a99aff"/>
+  <path d="M17.5 18.5v27" stroke="#a99aff" stroke-width="3" stroke-linecap="round"/>
+</svg>
