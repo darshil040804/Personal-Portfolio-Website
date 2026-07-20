@@ -303,21 +303,30 @@ h3 {
   width: min(46vw, 39rem);
   height: 31rem;
   opacity: 0.68;
-  border: 1px solid rgba(180, 169, 255, 0.11);
-  border-radius: 1.5rem;
+  border: 0;
+  border-radius: 0;
   background:
     linear-gradient(rgba(180, 169, 255, 0.04) 1px, transparent 1px),
     linear-gradient(90deg, rgba(180, 169, 255, 0.04) 1px, transparent 1px),
     rgba(10, 11, 16, 0.5);
   background-size: 2rem 2rem;
-  transform: rotate(-2deg);
-  box-shadow: 0 2rem 7rem rgba(62, 45, 155, 0.13);
+  transform: none;
+  box-shadow: none;
   pointer-events: none;
 }
 
 .hero-system-map span {
   position: absolute;
   display: block;
+}
+
+/* Keep the hero background decorative so it does not compete with the content. */
+.hero-system-map .system-caption,
+.hero-system-map .system-node,
+.hero-system-map .system-note,
+.hero-system-map .system-line,
+.hero-system-map .system-pulse {
+  display: none;
 }
 
 .system-caption,
