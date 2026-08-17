@@ -123,6 +123,7 @@ export const myProjects = [
         href: 'https://github.com/darshil040804/JobLens-AI',
         liveLink: 'https://job-lens-ai.vercel.app/',
         logo: '/assets/project-logo4.png',
+        category: ['Full-Stack', 'Backend', 'Frontend'],
         tags: ['React', 'Tailwind CSS', 'JavaScript', 'PuterJS'],
     },
     {
@@ -131,6 +132,7 @@ export const myProjects = [
         href: 'https://github.com/darshil040804/Movie-Hub',
         liveLink: 'https://movie-hub-guc4.vercel.app/',
         logo: '/assets/project-logo3.png',
+        category: ['Frontend'],
         tags: ['React', 'JavaScript', 'Tailwind CSS', 'Appwrite'],
     },
 ];

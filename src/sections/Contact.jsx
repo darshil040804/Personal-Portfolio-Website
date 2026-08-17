@@ -53,7 +53,6 @@ const Contact = () => {
             <div className="contact-intro">
                 <p className="eyebrow">Get in touch</p>
                 <h2 id="contact-heading">Have a project or opportunity in mind?</h2>
-                <p>I&apos;m always happy to discuss software, new ideas, and ways we can work together.</p>
                 <a className="email-link" href="mailto:darshil.desai.040804@gmail.com">
                     <FiMail aria-hidden="true" />
                     darshil.desai.040804@gmail.com
@@ -62,7 +61,11 @@ const Contact = () => {
 
             <form ref={formRef} onSubmit={handleSubmit} className="contact-form">
                 <div className="field-group">
-                    <label htmlFor="name">Full name</label>
+                    <label htmlFor="name">
+                        Full name
+                        <span className="required-marker" aria-hidden="true">*</span>
+                        <span className="sr-only"> required</span>
+                    </label>
                     <input
                         id="name"
                         type="text"
@@ -75,7 +78,11 @@ const Contact = () => {
                     />
                 </div>
                 <div className="field-group">
-                    <label htmlFor="email">Email address</label>
+                    <label htmlFor="email">
+                        Email address
+                        <span className="required-marker" aria-hidden="true">*</span>
+                        <span className="sr-only"> required</span>
+                    </label>
                     <input
                         id="email"
                         type="email"
@@ -88,7 +95,11 @@ const Contact = () => {
                     />
                 </div>
                 <div className="field-group">
-                    <label htmlFor="message">Message</label>
+                    <label htmlFor="message">
+                        Message
+                        <span className="required-marker" aria-hidden="true">*</span>
+                        <span className="sr-only"> required</span>
+                    </label>
                     <textarea
                         id="message"
                         name="message"

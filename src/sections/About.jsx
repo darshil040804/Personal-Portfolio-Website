@@ -12,15 +12,6 @@ const About = () => (
         </div>
 
         <div className="about-impact-layout">
-            <aside className="identity-card" aria-label="Darshil Desai profile">
-                <div className="identity-monogram" aria-hidden="true">DD</div>
-                <div>
-                    <span>Software Engineer</span>
-                    <strong>Darshil Desai</strong>
-                    <p>Michigan State University</p>
-                </div>
-            </aside>
-
             <div className="about-impact-copy">
                 <p>
                     At Michigan State University, I work where software engineering meets day-to-day operations.
@@ -31,7 +22,7 @@ const About = () => (
                     I bring a service mindset to engineering: listen closely, find the underlying problem, communicate
                     decisions clearly, and leave every system easier to use and maintain than I found it.
                 </p>
-            </div>
+            </div> 
 
             <dl className="impact-metrics" aria-label="Michigan State University impact">
                 {impactMetrics.map(({ value, label }) => (

@@ -37,6 +37,29 @@ const DocumentViewer = ({ document }) => {
         return () => observer.disconnect();
     }, []);
 
+    useEffect(() => {
+        const preview = previewRef.current;
+        if (!preview) return undefined;
+
+        const labelPdfLinks = () => {
+            preview.querySelectorAll('.annotationLayer a[href]').forEach((anchor) => {
+                if (anchor.textContent.trim() || anchor.hasAttribute('aria-label')) return;
+                const href = anchor.getAttribute('href') || '';
+                const label = href.startsWith('mailto:')
+                    ? `Email ${href.slice(7)}`
+                    : href.startsWith('tel:')
+                        ? `Call ${href.slice(4)}`
+                        : `Link to ${href.replace(/^https?:\/\//, '')}`;
+                anchor.setAttribute('aria-label', label);
+            });
+        };
+
+        labelPdfLinks();
+        const mutationObserver = new MutationObserver(labelPdfLinks);
+        mutationObserver.observe(preview, { childList: true, subtree: true });
+        return () => mutationObserver.disconnect();
+    }, [numPages]);
+
     const changeZoom = (amount) => {
         setZoom((current) => Math.min(MAX_ZOOM, Math.max(MIN_ZOOM, current + amount)));
     };

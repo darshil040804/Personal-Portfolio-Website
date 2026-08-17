@@ -6,7 +6,6 @@ const TechStack = () => (
         <div className="section-heading section-heading-compact">
             <p className="eyebrow">Technical toolkit</p>
             <h2 id="tech-heading">Tech Stack</h2>
-            <p>Technologies I use to build, ship, and maintain modern applications.</p>
         </div>
 
         <div className="tech-category-grid">

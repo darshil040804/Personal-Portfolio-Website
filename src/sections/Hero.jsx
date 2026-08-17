@@ -18,11 +18,9 @@ const Hero = () => (
             <span className="system-note">request → validate → persist → deploy</span>
         </div>
         <div className="hero-content">
-            <div className="hero-status">
-                <span className="availability-dot" aria-hidden="true" />
-                Open to software engineering opportunities
-            </div>
-            <p className="eyebrow">Darshil Desai · East Lansing, Michigan</p>
+            <p className="eyebrow">
+                Darshil Desai · <abbr title="United States of America">USA</abbr>, OPEN TO RELOCATION
+            </p>
             <h1 id="hero-heading">
                 Software engineer building <span>complete digital products.</span>
             </h1>
@@ -105,26 +103,17 @@ const Hero = () => (
                     </div>
                     <div className="snapshot-copy">
                         <strong>Michigan State University</strong>
-                        <p>Bachelor of Science in Computer Science</p>
+                        <p>Bachelor of Science in Computer Science (May 2026)</p>
                         <b>GPA 4.0</b>
                     </div>
                 </a>
             </div>
-            <div className="snapshot-section">
-                <h3>Mobility</h3>
-                <div className="snapshot-detail">
-                    <div className="snapshot-icon snapshot-icon-location">
-                        <FiMapPin aria-hidden="true" />
-                    </div>
-                    <div className="snapshot-copy">
-                        <strong>Open to working remotely or to relocate anywhere within the USA</strong>
-                    </div>
-                </div>
-            </div>
             <div className="snapshot-focus">
                 <h3>Primary focus</h3>
-                <strong>Software Engineering</strong>
-                <strong>Full-Stack Development</strong>
+                <strong>Software Engineer / Developer</strong>
+                <strong>Backend Developer</strong>
+                <strong>Frontend Developer</strong>
+                <strong>Full-Stack Developer</strong>
             </div>
         </aside>
     </section>

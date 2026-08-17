@@ -6,11 +6,10 @@ const Projects = () => (
         <div className="section-heading">
             <p className="eyebrow">Selected work</p>
             <h2 id="projects-heading">Projects built to solve real problems.</h2>
-            <p>A selection of full-stack and frontend applications.</p>
         </div>
 
         <div className="projects-grid">
-            {myProjects.map(({ title, desc, href, liveLink, logo, tags }) => (
+            {myProjects.map(({ title, desc, href, liveLink, logo, category, tags }) => (
                 <article className="project-card" key={title}>
                     <a
                         className="project-card-link"
@@ -29,6 +28,11 @@ const Projects = () => (
                         <h3>{title}</h3>
                         <p>{desc}</p>
                     </div>
+                    {category && (
+                        <ul className="category-tag-list" aria-label={`${title} category`}>
+                            {category.map((cat) => <li key={cat}>{cat}</li>)}
+                        </ul>
+                    )}
                     <ul className="tag-list" aria-label={`${title} technologies`}>
                         {tags.map((tag) => <li key={tag}>{tag}</li>)}
                     </ul>
