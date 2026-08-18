@@ -135,6 +135,15 @@ export const myProjects = [
         category: ['Frontend'],
         tags: ['React', 'JavaScript', 'Tailwind CSS', 'Appwrite'],
     },
+    {
+        title: 'Hall Connect',
+        desc: 'A Drupal 11 residence hall community portal with role-based access, event RSVPs with capacity limits, a custom PHP RSVP module, and hall/event/news directories with dynamic filtering.',
+        href: 'https://github.com/darshil040804/hall-connect',
+        liveLink: 'https://dev-hall-connect.pantheonsite.io',
+        logo: '/assets/project-logo5.svg',
+        category: ['Full-Stack', 'Backend', 'Frontend'],
+        tags: ['Drupal', 'PHP', 'MySQL', 'Views', 'Figma'],
+},
 ];
 
 export const workExperiences = [
